@@ -9,4 +9,4 @@ if words:
     print(f'Самое короткое слово: {shortest_word}')
     print(f'Длина самого короткого слова: {min_length}')
 else:
-    print('Предллжение пустое')
+    print('Предложение пустое')
