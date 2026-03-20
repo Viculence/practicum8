@@ -15,12 +15,12 @@ def bulls_and_cows(guess, secret):
 
 
 def main():
-    secret_number = input('Введите 4-значное цисло без повторения цифр: ')
+    secret_number = input('Введите 4-значное число без повторения цифр: ')
 
     while len(secret_number) != 4 or len(set(secret_number)) != 4 or \
             not secret_number.isdigit():
         print('Неверный ввод! Повторите попытку.')
-        secret_number = input('Введите 4-значное цисло без повторения цифр: ')
+        secret_number = input('Введите 4-значное число без повторения цифр: ')
 
     hide_screen()
 
