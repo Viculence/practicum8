@@ -1,3 +1,4 @@
+# ввод подсказки и загаданного слова
 def field_of_dreams():
     tip = input()
     word = input().lower()
