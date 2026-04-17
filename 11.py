@@ -1,3 +1,4 @@
+# функция принимает строку с городами
 def game(cities):
     cities_list = cities.split()
     
