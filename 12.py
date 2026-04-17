@@ -1,5 +1,6 @@
 import keyword
 
+# функция принимает строку - предполагаемое имя переменной
 def valid_variable_name(name):
     if name.isidentifier() and name not in keyword.kwlist:
         return "Допустимое имя переменной"
