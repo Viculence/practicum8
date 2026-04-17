@@ -1,8 +1,10 @@
+# вывод 25 пустых строк (имитация очистки экрана)
 def hide_screen():
     for _ in range(25):
         print()
 
 
+# функция принимает угаданное и загаданное числа
 def bulls_and_cows(guess, secret):
     bulls = 0
     cows = 0
@@ -14,6 +16,7 @@ def bulls_and_cows(guess, secret):
     return bulls, cows
 
 
+# ведущий вводит загаданное число
 def main():
     secret_number = input('Введите 4-значное число без повторения цифр: ')
 
