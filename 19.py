@@ -10,6 +10,8 @@ VOWELS = 'аеёиоуыьъэюяАЕЁИОУЫЬЪЭЮЯ'
 CONSONANTS = 'бвгджзйклмнпрстфхцчшщБВГДЖЗЙКЛМНПРСТФХЦЧШЩ'
 
 
+# Находит позиции в слове, где можно сделать перенос по слогам
+# Возвращает список индексов символов, после которых можно разделить слово
 def get_syllable_breaks(word):
     breaks = []
     vowel_position = [i for i, c in enumerate(word) if c in VOWELS]
@@ -45,6 +47,9 @@ def get_syllable_breaks(word):
     return breaks
 
 
+# Разделяет слово на две части с переносом по слогам
+# Первая часть (с дефисом) должна поместиться в max_len символов
+# Возвращает кортеж (часть1_с_дефисом, часть2) или None если не удалось
 def split_word_for_fit(word, max_len):
     suffix = ''
     core = word
@@ -63,6 +68,8 @@ def split_word_for_fit(word, max_len):
     return None
 
 
+# Форматирует текст в колонку заданной ширины с выравниванием по ширине
+# Переносит слова по слогам и равномерно распределяет пробелы между словами
 def justify_text(text, line_width):
     words = text.split()
     lines = []
