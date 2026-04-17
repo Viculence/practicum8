@@ -1,8 +1,10 @@
+# функция, принимающая строку с выражением
 def evaluate_expression(expr):
     operands = []
     operator_stack = []
 
 
+    # применение оператора к двум последним числам из стека
     def apply_operator(operator):
         b = operands.pop()
         a = operands.pop()
@@ -47,6 +49,7 @@ def evaluate_expression(expr):
     return operands[0]
 
 
+# получение выражения от пользователя
 def main():
     expression = input("Введите выражение: ")
     print("Результат:", evaluate_expression(expression))
