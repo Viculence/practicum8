@@ -1,3 +1,4 @@
+# номер билета
 def happy_ticket(ticket_number):
     ticket_str = str(ticket_number)
     length = len(ticket_str)
@@ -14,6 +15,7 @@ def happy_ticket(ticket_number):
     return False
 
 
+# ввод порядкового номера счастливого билета
 def ticket_cycle():
     count = 1
     while True:
