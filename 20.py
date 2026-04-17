@@ -1,3 +1,4 @@
+# преобразует число в текстовое представление на русском языке
 def number_to_words(n):
     ones = ['', 'один', 'два', 'три', 'четыре', 'пять', 'шесть',
             'семь', 'восемь', 'девять', 'десять', 'одиннадцать',
@@ -13,6 +14,8 @@ def number_to_words(n):
                 'шестьсот', 'семьсот', 'восемьсот', 'девятьсот'
     ]
 
+
+    # преобразует число от 0 до 999 в текст
     def convert_hundreds(num):
         if num == 0:
             return ''
@@ -24,6 +27,8 @@ def number_to_words(n):
         return hundreds[num // 100] + (' ' + convert_hundreds(num % 100)
                                      if num % 100 != 0 else '')
 
+
+    # возвращает правильное окончание слова в зависимости от числа
     def convert_group(num, one, two, five):
         if num == 0:
             return ''
